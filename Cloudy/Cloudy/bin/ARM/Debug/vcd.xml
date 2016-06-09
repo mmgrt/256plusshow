@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CommandSet_en-us">
+    <AppName> Cloudy </AppName>
+    <Example> Is it cloudy in Riyadh? </Example>
+
+    <Command Name="cloudCheck">
+      <Example> Is it cloudy in Riyadh? </Example>
+      <ListenFor RequireAppName="ExplicitlySpecified"> Is it {builtin:AppName} in {cityName}</ListenFor>
+      <Feedback> I'll check that for you! </Feedback>
+      <Navigate/>
+    </Command>
+
+
+    <PhraseTopic Label="cityName" Scenario="Search">
+      <Subject>City/State</Subject>
+    </PhraseTopic>
+    
+  </CommandSet>
+
+  
+</VoiceCommands>

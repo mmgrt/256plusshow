@@ -1,0 +1,58 @@
+﻿<Page x:Class="Cloudy.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:Cloudy" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+
+    <Grid Background="#FFEEEEEE">
+        <Border Background="White" MaxWidth="360" MaxHeight="650" BorderThickness="2" BorderBrush="#FFD4D4D4">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.2*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="115" Foreground="#FF1CAECF" />
+                    <TextBlock Text="CLOUDY" FontFamily="Open Sans" FontWeight="Thin" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Foreground="#FFABE0EC" />
+                    <TextBlock Text="IS MY CITY CLOUDY?" FontFamily="Open Sans" FontWeight="Thin" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13" Foreground="#FF14859E" />
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="1">
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Write your city name" FontFamily="Open Sans" FontWeight="Thin" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="19" Foreground="#FF363636" />
+                        <TextBox x:Name="txtCity" FontFamily="Open Sans" FontWeight="Bold" Background="#FFD4F7FF" BorderBrush="{x:Null}" BorderThickness="0" Foreground="#FF0B7893" Margin="0,5,0,0" />
+                        <Button x:Name="check" FontFamily="Open Sans" FontWeight="Thin" Content="Check" HorizontalAlignment="Stretch" Foreground="White" Background="#FF4DB9D1" Margin="0,5,0,0" Click="check_Click" />
+                    </StackPanel>
+
+                    <StackPanel x:Name="result">
+
+                        <StackPanel Visibility="Collapsed" x:Name="NOContainer" Margin="0,20,0,0">
+                            <TextBlock Text="" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" Foreground="#FFEA5151" FontSize="50" />
+                            <TextBlock Text="NO" FontFamily="Open Sans" FontWeight="Thin" HorizontalAlignment="Center" Foreground="#FFEA5151" FontSize="40" />
+                        </StackPanel>
+
+                        <StackPanel Visibility="Collapsed" x:Name="YESContainer" Margin="0,10,0,0">
+                            <TextBlock Text="" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" Foreground="#FF66E288" FontSize="50" />
+                            <TextBlock Text="YES" FontFamily="Open Sans" FontWeight="Thin" HorizontalAlignment="Center" Foreground="#FF66E288" FontSize="40" />
+                        </StackPanel>
+
+                        <Button x:Name="addToLiveTile" Background="Transparent" BorderBrush="#FF1CAECF" BorderThickness="1.4" FontFamily="Segoe MDL2 Assets"  Foreground="#FF1CAECF" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Click="addToLiveTile_Click" Height="41" Padding="8,2,8,4">
+                            <!--Content=""-->
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock x:Name="startIcon" Margin="5" FontFamily="Segoe MDL2 Assets" Text="" Foreground="#FF1CAECF" FontSize="19" />
+                                <TextBlock x:Name="addToLiveTilesLabel" Margin="5" FontFamily="Segoe UI Light" FontWeight="Light" Text="Add to live tiles" Foreground="#FF1CAECF" FontSize="20" />
+
+                            </StackPanel>
+                        </Button>
+                        <!--<Grid x:Name="pin" Width="60" Height="60" Background="Transparent" Tapped="pin_Tapped">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="" Foreground="#FF1CAECF" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>-->
+
+
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>
